@@ -104,6 +104,13 @@ export const CardContainer = styled.div`
       width: auto;
       aspect-ratio: 1;
     }
+
+    @media (max-width: 480px) {
+      flex-direction: column;
+      visibility: visible;
+      padding: 20px;
+      gap: 20px;
+    }
   }
 `;
 

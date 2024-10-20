@@ -40,9 +40,10 @@ const Section = styled.section`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     gap: 0;
     flex-direction: column;
+    padding: 20px;
 
     border: 2px solid black;
     justify-content: center;

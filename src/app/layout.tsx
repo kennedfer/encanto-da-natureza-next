@@ -18,7 +18,7 @@ export default function RootLayout({
         <title>{texts.headTags.title}</title>
       </head>
       <body>
-        <ThemeProvider theme={darkTheme}>
+        <ThemeProvider theme={lightTheme}>
           <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
         </ThemeProvider>
       </body>
