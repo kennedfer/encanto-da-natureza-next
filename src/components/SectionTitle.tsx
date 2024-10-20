@@ -7,7 +7,7 @@ const SectionTitle = styled.h1`
   line-height: 5rem;
   font-weight: 900;
 
-  color: #727272;
+  color: ${({ theme }) => theme.titleColor};
 
   & span {
     display: block;

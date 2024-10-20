@@ -1,37 +1,87 @@
 import "../styles/global.css";
 import Image from "next/image";
 
-import logoImage from "../public/assets/images/sections/logo-encanto-da-natureza.webp";
+import logoImage from "../../public/assets/images/sections/logo-encanto-da-natureza.webp";
+import dancerImage from "../../public/assets/images/sections/ricardo-encantodanatureza.webp";
+import qrcodeImage from "../../public/assets/images/sections/qrcode.png";
 
 import SectionTitle from "@/components/SectionTitle";
 import SectionLayout, { SectionContent } from "@/components/SectionLayout";
 import Text from "@/components/Text";
 import Button from "@/components/Button";
+import InfoCard from "@/components/InfoCard";
+import texts from "@/texts/texts";
+import Main from "@/components/Main";
+import ScrollIndicator from "@/components/ScrollIndicator";
+import MasonryGallery from "@/components/MasonryGallery";
 
 export default function Home() {
   return (
-    <main>
-      <SectionLayout>
+    <Main>
+      <SectionLayout id="home">
         <SectionContent>
           <SectionTitle>
-            <span>BOI ENCANTO</span>
-            <span className="highlighted">DA NATUREZA</span>
+            <span>{texts.homeSection.firstTitle}</span>
+            <span className="highlighted">{texts.homeSection.lastTitle}</span>
           </SectionTitle>
-          <Text>
-            Através de nossa arte, reafirmamos a importância da inclusão e da
-            diversidade, celebrando o folclore e suas ricas histórias. Venha nos
-            conhecer e mergulhar na beleza da cultura popular.
-          </Text>
+          <Text>{texts.homeSection.description}</Text>
           <div>
-            <Button>Saiba Mais</Button>
-            <Button className="ghost">Veja nossos videos</Button>
+            <Button>{texts.homeSection.seeAbout}</Button>
+            <Button className="ghost">{texts.homeSection.seeOurVideos}</Button>
           </div>
         </SectionContent>
-        <Image alt="image" width={500} src={logoImage} />
+        <Image
+          alt={texts.homeSection.imageAlt}
+          width={500}
+          src={logoImage}
+          priority
+        />
+
+        <ScrollIndicator targetId="cards" />
       </SectionLayout>
-      <SectionLayout>
-        <div>card aiaia</div>
+      <SectionLayout id="cards">
+        <InfoCard infos={texts.cards.historyCard} />
+        <InfoCard infos={texts.cards.peoplesCard} />
+        <InfoCard infos={texts.cards.bookCard} />
+        <ScrollIndicator targetId="gallery" />
       </SectionLayout>
-    </main>
+      <SectionLayout id="gallery">
+        <MasonryGallery />
+        <ScrollIndicator targetId="about" />
+      </SectionLayout>
+
+      <SectionLayout id="about">
+        <Image
+          alt={texts.aboutSection.imageAlt}
+          width={500}
+          src={dancerImage}
+        />
+        <SectionContent>
+          <SectionTitle>
+            <span className="highlighted">{texts.aboutSection.title}</span>
+          </SectionTitle>
+          <Text>{texts.aboutSection.description}</Text>
+        </SectionContent>
+
+        <ScrollIndicator targetId="donation" />
+      </SectionLayout>
+      <SectionLayout id="donation">
+        <SectionContent>
+          <SectionTitle>
+            <span className="highlighted">{texts.donationSection.title}</span>
+          </SectionTitle>
+          <Text>{texts.donationSection.description}</Text>
+        </SectionContent>
+        <Image
+          style={{
+            marginLeft: "auto",
+          }}
+          alt={texts.donationSection.imageAlt}
+          width={400}
+          src={qrcodeImage}
+        />
+        <ScrollIndicator up targetId="home" />
+      </SectionLayout>
+    </Main>
   );
 }
