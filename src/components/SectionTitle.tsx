@@ -16,6 +16,25 @@ const SectionTitle = styled.h1`
   & .highlighted {
     font-size: 5rem;
   }
+
+  @media (max-aspect-ratio: 1) {
+    font-size: 2.3rem;
+    line-height: 2.5rem;
+
+    .highlighted {
+      font-size: inherit;
+    }
+  }
+
+  @media (max-width: 480px) {
+    text-align: center;
+    font-size: 2.25rem;
+    line-height: normal;
+
+    .highlighted {
+      font-size: inherit;
+    }
+  }
 `;
 
 export default SectionTitle;

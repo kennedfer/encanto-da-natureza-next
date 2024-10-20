@@ -30,6 +30,34 @@ const Section = styled.section`
   margin: 0 auto;
 
   height: 100vh;
+
+  @media (max-aspect-ratio: 1) {
+    padding: 100px;
+    gap: 20px;
+
+    & > img {
+      margin-left: auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    gap: 0;
+    flex-direction: column;
+
+    border: 2px solid black;
+    justify-content: center;
+
+    overflow: scroll;
+
+    & > img {
+      display: none;
+    }
+
+    &.cards-container {
+      visibility: hidden;
+      padding: 0;
+    }
+  }
 `;
 
 export const SectionContent = styled.div`
@@ -38,18 +66,33 @@ export const SectionContent = styled.div`
   justify-content: center;
   gap: 20px;
   max-width: 700px;
+
+  @media (max-aspect-ratio: 1) {
+    & > .buttons-container {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  @media (max-width: 480px) {
+    & > .buttons-container {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 `;
 
 type SectionProps = {
   children: ReactNode;
   id: string;
+  className?: string;
 };
 export default function SectionLayout({
   children,
   id,
+  className,
 }: Readonly<SectionProps>) {
   return (
-    <Section id={id} className={montserrat.className}>
+    <Section id={id} className={montserrat.className && " " && className}>
       {children}
     </Section>
   );

@@ -28,7 +28,7 @@ const Card = {
     flex-grow: 1;
 
     aspect-ratio: 1;
-    width: 200px;
+    width: 100px;
 
     background-color: ${({ theme }) => theme.cardBackground};
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.125);
@@ -36,7 +36,6 @@ const Card = {
     padding: 30px;
     gap: 5px;
 
-    margin: 30px;
     border-radius: 10px;
     transition: box-shadow ${({ theme }) => theme.transitionTime},
       scale ${({ theme }) => theme.transitionTime};
@@ -82,6 +81,31 @@ type InfosProps = {
 type InfoCardProps = {
   infos: InfosProps;
 };
+
+export const CardContainer = styled.div`
+  display: flex;
+  width: 100%;
+
+  gap: 50px;
+
+  @media (max-aspect-ratio: 1) {
+    flex-direction: column;
+    overflow: scroll;
+    padding: 150px;
+
+    height: 100vh;
+
+    gap: 50px;
+    scrollbar-width: none;
+
+    font-size: smaller;
+
+    & > div {
+      width: auto;
+      aspect-ratio: 1;
+    }
+  }
+`;
 
 export default function InfoCard({ infos }: Readonly<InfoCardProps>) {
   return (

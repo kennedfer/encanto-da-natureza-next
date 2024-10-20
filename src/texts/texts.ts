@@ -1,4 +1,10 @@
 const texts = {
+  headTags: {
+    title: "Encanto da Natureza",
+    description:
+      "Conheça o Boi Encanto da Natureza, um grupo junino de boi bumbá que celebra a cultura e as tradições indigenas do Brasil. Participe de nossas apresentações vibrantes e eventos culturais cheios de magia e emoção.",
+  },
+
   homeSection: {
     firstTitle: "BOI ENCANTO",
     lastTitle: "DA NATUREZA",
@@ -47,7 +53,7 @@ const texts = {
       title: "TRADIÇÃO",
       description:
         "Preservando os contos indígenas, mantemos vivo seu legado para as próximas gerações.",
-      name: "calendar",
+      name: "book",
       altText: "icone de livro com marcador",
     },
   },

@@ -17,6 +17,10 @@ const IndicatorContainer = styled.div`
   &.up {
     transform: scaleY(-1);
   }
+
+  @media (max-width: 768px) {
+    visibility: hidden;
+  }
 `;
 
 export default function ScrollIndicator({

@@ -9,7 +9,7 @@ import SectionTitle from "@/components/SectionTitle";
 import SectionLayout, { SectionContent } from "@/components/SectionLayout";
 import Text from "@/components/Text";
 import Button from "@/components/Button";
-import InfoCard from "@/components/InfoCard";
+import InfoCard, { CardContainer } from "@/components/InfoCard";
 import texts from "@/texts/texts";
 import Main from "@/components/Main";
 import ScrollIndicator from "@/components/ScrollIndicator";
@@ -25,7 +25,7 @@ export default function Home() {
             <span className="highlighted">{texts.homeSection.lastTitle}</span>
           </SectionTitle>
           <Text>{texts.homeSection.description}</Text>
-          <div>
+          <div className="buttons-container">
             <Button>{texts.homeSection.seeAbout}</Button>
             <Button className="ghost">{texts.homeSection.seeOurVideos}</Button>
           </div>
@@ -39,10 +39,12 @@ export default function Home() {
 
         <ScrollIndicator targetId="cards" />
       </SectionLayout>
-      <SectionLayout id="cards">
-        <InfoCard infos={texts.cards.historyCard} />
-        <InfoCard infos={texts.cards.peoplesCard} />
-        <InfoCard infos={texts.cards.bookCard} />
+      <SectionLayout className="cards-container" id="cards">
+        <CardContainer>
+          <InfoCard infos={texts.cards.historyCard} />
+          <InfoCard infos={texts.cards.peoplesCard} />
+          <InfoCard infos={texts.cards.bookCard} />
+        </CardContainer>
         <ScrollIndicator targetId="gallery" />
       </SectionLayout>
       <SectionLayout id="gallery">

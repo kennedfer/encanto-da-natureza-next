@@ -24,6 +24,7 @@ import texts from "@/texts/texts";
 const Gallery = styled.div`
   display: flex;
   flex-direction: column;
+  overflow: auto;
 
   width: 100%;
 `;
@@ -36,6 +37,20 @@ const MasonryGrid = styled.div`
 
   height: 700px;
   flex-grow: 1;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+
+    & > div {
+      min-height: 250px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(1, 1fr); /* 1 coluna para celulares */
+  }
 `;
 
 const MasonryItem = styled.div`
@@ -113,8 +128,6 @@ const MasonryItem = styled.div`
   }
 
   & .image {
-    position: absolute;
-
     object-fit: cover;
     width: 100%;
     height: 100%;
