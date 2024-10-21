@@ -15,6 +15,11 @@ const Button = styled.button`
   border-radius: 30px;
   font-weight: 700;
 
+  &:active {
+    box-shadow: 0 0 30px ${({ theme }) => theme.primaryColor};
+    scale: 1;
+  }
+
   &:hover {
     box-shadow: 0 0 50px ${({ theme }) => theme.primaryColor};
     scale: 1.05;
@@ -26,6 +31,10 @@ const Button = styled.button`
     box-shadow: none;
 
     color: ${({ theme }) => theme.primaryColor};
+  }
+
+  @media (max-aspect-ratio: 1) {
+    width: 100%;
   }
 `;
 

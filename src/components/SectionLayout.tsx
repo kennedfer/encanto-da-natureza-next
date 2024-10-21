@@ -16,7 +16,6 @@ const Section = styled.section`
 
   position: relative;
 
-  background-image: "../../public/assets/images/patterns/section-pattern.webp";
   object-fit: fill;
   background-size: 20px;
 
@@ -45,7 +44,6 @@ const Section = styled.section`
     flex-direction: column;
     padding: 20px;
 
-    border: 2px solid black;
     justify-content: center;
 
     overflow: scroll;

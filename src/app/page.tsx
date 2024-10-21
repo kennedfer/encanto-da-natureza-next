@@ -14,6 +14,8 @@ import texts from "@/texts/texts";
 import Main from "@/components/Main";
 import ScrollIndicator from "@/components/ScrollIndicator";
 import MasonryGallery from "@/components/MasonryGallery";
+import Link from "next/link";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -26,8 +28,18 @@ export default function Home() {
           </SectionTitle>
           <Text>{texts.homeSection.description}</Text>
           <div className="buttons-container">
-            <Button>{texts.homeSection.seeAbout}</Button>
-            <Button className="ghost">{texts.homeSection.seeOurVideos}</Button>
+            <Link href="#about">
+              <Button>{texts.homeSection.seeAbout}</Button>
+            </Link>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.instagram.com/encanto_da_naturezaofc/"
+            >
+              <Button className="ghost">
+                {texts.homeSection.seeOurVideos}
+              </Button>
+            </Link>
           </div>
         </SectionContent>
         <Image
@@ -36,7 +48,6 @@ export default function Home() {
           src={logoImage}
           priority
         />
-
         <ScrollIndicator targetId="cards" />
       </SectionLayout>
       <SectionLayout className="cards-container" id="cards">
@@ -82,8 +93,8 @@ export default function Home() {
           width={400}
           src={qrcodeImage}
         />
-        <ScrollIndicator up targetId="home" />
       </SectionLayout>
+      <Footer />
     </Main>
   );
 }

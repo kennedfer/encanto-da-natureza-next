@@ -5,6 +5,20 @@ const texts = {
       "Conheça o Boi Encanto da Natureza, um grupo junino de boi bumbá que celebra a cultura e as tradições indigenas do Brasil. Participe de nossas apresentações vibrantes e eventos culturais cheios de magia e emoção.",
   },
 
+  footer: {
+    links: {
+      home: "Home",
+      cards: "Cartões",
+      gallery: "Galeria",
+      about: "Sobre Nós",
+      donation: "Doações",
+    },
+    address:
+      "Avenida Nossa Senhora do Livramento, S/N, POV. LIVRAMENTO Carutapera-MA",
+    contact: "(98) 98566-4496",
+    copy: "Boi Encanto da Natureza © 2024",
+  },
+
   homeSection: {
     firstTitle: "BOI ENCANTO",
     lastTitle: "DA NATUREZA",

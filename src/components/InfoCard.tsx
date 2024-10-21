@@ -108,7 +108,7 @@ export const CardContainer = styled.div`
     @media (max-width: 480px) {
       flex-direction: column;
       visibility: visible;
-      padding: 20px;
+      padding: 80px;
       gap: 20px;
     }
   }

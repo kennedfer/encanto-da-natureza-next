@@ -2,7 +2,9 @@
 const nextConfig = {
   compiler: {
     styledComponents: true
-  }
+  },
+
+  output: "export"
 };
 
 export default nextConfig;
