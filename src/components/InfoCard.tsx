@@ -4,9 +4,9 @@ import type { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 import styled from "styled-components";
 
-import bookIcon from "../../public/assets/images/card-icons/book.svg";
-import calendarIcon from "../../public/assets/images/card-icons/calendar.svg";
-import peoplesIcon from "../../public/assets/images/card-icons/peoples.svg";
+import bookIcon from "/public/assets/images/card-icons/book.svg";
+import calendarIcon from "/public/assets/images/card-icons/calendar.svg";
+import peoplesIcon from "/public/assets/images/card-icons/peoples.svg";
 
 type CardIconsProps = { [key: string]: StaticImport };
 
