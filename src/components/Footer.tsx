@@ -16,7 +16,7 @@ const StyledFooter = {
     scroll-snap-align: center;
 
     bottom: 0;
-    padding: 5px;
+    padding: 15px;
 
     background-color: ${({ theme }) => theme.footerBackground};
     color: ${({ theme }) => theme.footerForeground};

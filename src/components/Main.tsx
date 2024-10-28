@@ -23,14 +23,9 @@ const StyledMain = styled.main`
   scroll-snap-type: y mandatory;
   scrollbar-width: thin;
 
-  --scroll-behavior: smooth !important;
   scroll-behavior: smooth !important;
 
-  @media (prefers-reduced-motion: reduce) {
-    & {
-      scroll-behavior: auto;
-    }
-  }
+  transition: --scroll-behavior 200s ease;
 `;
 
 export default function Main({ children }: Readonly<{ children: ReactNode }>) {
