@@ -16,6 +16,25 @@ import ScrollIndicator from "@/components/ScrollIndicator";
 import MasonryGallery from "@/components/MasonryGallery";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  openGraph: {
+    title: texts.headTags.title,
+    description: texts.headTags.description,
+    url: "https://encantodanatureza.site",
+    siteName: texts.headTags.title,
+    images: [
+      {
+        url: "https://encantodanatureza.site/assets/images/preview/open-graph-preview.webp",
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: "pt_BR",
+    type: "website",
+  },
+};
 
 export default function Home() {
   return (
