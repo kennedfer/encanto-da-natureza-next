@@ -42,6 +42,7 @@ const MasonryGrid = styled.div`
     display: flex;
     flex-direction: column;
     overflow: scroll;
+    scrollbar-width: none;
 
     & > div {
       min-height: 250px;

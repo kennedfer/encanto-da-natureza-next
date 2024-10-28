@@ -25,7 +25,7 @@ const StyledMain = styled.main`
 
   scroll-behavior: smooth !important;
 
-  transition: --scroll-behavior 200s ease;
+  transition: scroll-behavior 200s ease;
 `;
 
 export default function Main({ children }: Readonly<{ children: ReactNode }>) {
